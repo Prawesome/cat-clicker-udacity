@@ -8,14 +8,14 @@
     <ul id="cat-list"></ul>
     <div id="cat">
 
-        <h2 id="cat-name" data-bind="text: catName"></h2>
-        <div id="cat-count" data-bind="text: catCount"></div>
-        <div id="cat-category" data-bind="text: catCategory"></div>
-        <img id="cat-img" src="" alt="cute cat" data-bind="attr: {src: catImage}, click: incrementCount">
+        <h2 id="cat-name" data-bind="text: currentCat().catName"></h2>
+        <div id="cat-count" data-bind="text: currentCat().catCount"></div>
+        <div id="cat-category" data-bind="text: currentCat().catCategory"></div>
+        <img id="cat-img" src="" alt="cute cat" data-bind="attr: {src: currentCat().catImage}, click: incrementCount">
 
     </div>
 
-    <ul data-bind="foreach: catNicks">
+    <ul data-bind="foreach: currentCat().catNicks">
         <li data-bind="text: nick"></li>
     </ul>
     <script src="js/lib/knockout-3.2.0.js"></script>
