@@ -14,6 +14,11 @@ var ViewModel = function() {
             return "kilavan";
         }
     }, this);
+
+    this.catNicks = ko.observableArray([
+        {nick : 'Toby'},
+        {nick : 'Pottan'}
+    ]);
 };
 
 ko.applyBindings(new ViewModel());

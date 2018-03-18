@@ -14,6 +14,10 @@
         <img id="cat-img" src="" alt="cute cat" data-bind="attr: {src: catImage}, click: incrementCount">
 
     </div>
+
+    <ul data-bind="foreach: catNicks">
+        <li data-bind="text: nick"></li>
+    </ul>
     <script src="js/lib/knockout-3.2.0.js"></script>
     <script src="js/app.js"></script>
 </body>
